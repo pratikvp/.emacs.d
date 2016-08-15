@@ -1,6 +1,6 @@
 ;; (require 'org-install)
 (require 'org)
-(require 'htmlize)
+;;(require 'htmlize)
 (setq htmlize-ignore-faces '(whitespace-line whitespace-indentation))
 
 (setq org-default-notes-file "~/notes/notes.org")
