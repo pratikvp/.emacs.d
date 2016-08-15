@@ -273,15 +273,21 @@ installed/loaded.")
   :bind
   (("C-x C-b" . helm-buffers-list)
    ("C-x r h" . helm-bookmarks)
+   ("C-c h" . helm-command-prefix)
+   ("C-x c" . nil)
+   ("C-c h o" . helm-occur)
+   ("M-x" . helm-M-x)
    :map helm-map
    ("C-s" . helm-next-line)
    ("C-r" . helm-previous-line))
   :init
   (require 'helm)
   (require 'helm-config)
+  ;; (helm-mode 1)
+  ;; (helm-autoresize-mode 1)
   (use-package helm-ls-git
     :bind
-    ("C-c m f" . helm-ls-git-ls))
+    ("C-c h g f" . helm-ls-git-ls))
   (use-package helm-swoop)
   (require 'helm-bookmark)
   (setq helm-minibuffer-history-key nil
