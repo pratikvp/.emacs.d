@@ -344,7 +344,8 @@ installed/loaded.")
 
 (use-package magit
   :bind
-  (("C-c m t" . magit-status)
+  (("C-c m s" . magit-status)
+   ("C-c m h" . magit-dispatch-popup)
    ("C-c m T" . magit-commit)
    ("C-c m C-c" . magit-commit-popup)
    ("C-c m P" . magit-push-popup)
@@ -352,8 +353,9 @@ installed/loaded.")
    ("C-c m c" . magit-show-commit)
    ("C-c m m c" . m/show-commit-at-point)
    ("C-c m :" . magit-git-command)
+   ("C-c m b" . nil)
    ("C-c m m b" . magit-blame)
-   ("C-c m m l" . m/magit-file-log))
+   ("C-c m l" . m/magit-file-log))
   :init
   (use-package git-commit
     :bind
