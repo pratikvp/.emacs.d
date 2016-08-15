@@ -596,9 +596,10 @@ installed/loaded.")
 
 (use-package avy
   :bind
-  (("C-c SPC" . avy-goto-char)
-   ("C-c m SPC" . avy-pop-mark)
-   ("M-g g" . avy-goto-line)))
+  (("C-c v c" . avy-goto-char)
+   ("C-c v w" . avy-goto-word-0)
+   ("C-c v ," . avy-pop-mark)
+   ("C-c v l" . avy-goto-line)))
 
 (use-package ov)
 
