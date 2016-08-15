@@ -234,9 +234,9 @@ installed/loaded.")
 (use-package org
   :init (m/l "init-org.el")
   :bind
-  (("C-c l" . org-store-link)
-   ("C-c c" . org-capture)
-   ("C-c a" . org-agenda))
+  (("C-c o l" . org-store-link)
+   ("C-c o c" . org-capture)
+   ("C-c o a" . org-agenda))
   :config
   (use-package ox-reveal)
   (use-package htmlize))
