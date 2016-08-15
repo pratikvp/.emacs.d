@@ -176,8 +176,27 @@ installed/loaded.")
 
 (use-package ggtags
   :bind
-  ("M-*" . pop-tag-mark)
-  ("C-c m M-." . ggtags-find-tag-continue)
+  (:map ggtags-mode-map
+   ("C-c g d" . ggtags-find-tag-dwim)
+   ("C-c g r" . ggtags-find-reference)
+   ("C-c g ." . ggtags-find-tag-continue)
+   ("C-c g t d" . ggtags-delete-tags)
+   ("C-c g p" . ggtags-prev-mark)
+   ("C-c g n" . ggtags-next-mark)
+   ("C-c g f" . ggtags-find-file)
+   ("C-c g o" . ggtags-find-other-symbol)
+   ("C-c g g" . ggtags-grep)
+   ("C-c g i" . ggtags-idutils-query)
+   ("C-c g b" . ggtags-browse-file-as-hypertext)
+   ("C-c g k" . ggtags-file-buffers)
+   ("C-c g v t" . ggtags-view-tag-history)
+   ("C-c g v p" . ggtags-visit-project-root)
+   ("C-c g v s" . ggtags-view-search-history)
+   ("C-c g s r" . ggtags-save-to-register)
+   ("C-c g q r" . ggtags-query-replace)
+   ("C-c g s d" . ggtags-show-definition)
+   ("C-c g t c" . ggtags-create-tags)
+   ("C-c g t u" . ggtags-update-tags))
   :init
   (dolist (hook '(c-mode-common-hook
                   dired-mode-hook
