@@ -912,7 +912,9 @@ alteration."
 
 (use-package debbugs)
 
-(use-package git-timemachine)
+(use-package git-timemachine
+  :bind
+  (("C-c m t")))
 
 ;;; override `vc-git-find-file-hook' due to
 ;;; http://debbugs.gnu.org/cgi/bugreport.cgi?bug=21559
@@ -923,7 +925,7 @@ alteration."
 
 (use-package calendar
   :bind
-  (("C-c m m C" . calendar)))
+  (("C-c C" . calendar)))
 
 
 ;;; These lines should be last:
