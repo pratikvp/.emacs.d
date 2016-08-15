@@ -1,6 +1,6 @@
-(require 'server)
-(unless (server-running-p)
-  (server-start))
+;; (require 'server)
+;; (unless (server-running-p)
+;;   (server-start))
 
 (defun m/l (file)
   "loads a file from the `user-emacs-directory'"
