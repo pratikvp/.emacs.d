@@ -428,11 +428,10 @@ installed/loaded.")
 
 (use-package expand-region
   :bind
-  (("C-=" . er/expand-region)
-   ("C-c m =" . er/expand-region)))
+  (("C-c =" . er/expand-region)))
 
 (use-package google-this
-  :bind-keymap ("C-c m /" . google-this-mode-submap)
+  :bind-keymap ("C-c C-c /" . google-this-mode-submap)
   :diminish google-this-mode)
 
 (use-package highlight-symbol
@@ -444,14 +443,10 @@ installed/loaded.")
 
 (use-package multiple-cursors
   :bind
-  (("C-S-c C-S-c" . mc/edit-lines)
-   ("C-c m C" . mc/edit-lines)
-   ("C->" . mc/mark-next-like-this)
-   ("C-c m >" . mc/mark-next-like-this)
-   ("C-<" . mc/mark-previous-like-this)
-   ("C-c m <" . mc/mark-previous-like-this)
-   ("C-c C-<" . mc/mark-all-like-this)
-   ("C-c m m <" . mc/mark-all-like-this))
+  (("C-c c ." . mc/edit-lines)
+   ("C-c c >" . mc/mark-next-like-this)
+   ("C-c c <" . mc/mark-previous-like-this)
+   ("C-c c ?" . mc/mark-all-like-this))
   :init
   (use-package phi-search
     :init
